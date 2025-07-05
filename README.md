@@ -63,6 +63,6 @@ If you like the project or want to connect:
 
 Email: eyadqaasim@gmail.com
 
-LinkedIn: [Your LinkedIn link if you have one]
+[LinkedIn Profile](https://www.linkedin.com/in/eyad-qasim-2a96b624b/)
 
-GitHub: https://github.com/eyad6789
+[GitHub Profile](https://github.com/eyad6789)
