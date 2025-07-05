@@ -1,12 +1,67 @@
-# React + Vite
+# My Portfolio 🌐
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code of my **Personal Portfolio Website**, built to showcase my work, projects, and skills as a developer.
 
-Currently, two official plugins are available:
+## 🔥 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live website here:  
+[https://progressinpeace.org/home.html](https://progressinpeace.org/home.html)
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Modern, clean design  
+- ✅ Fully responsive for all devices  
+- ✅ Smooth animations  
+- ✅ Sections for Projects, About Me, Skills, and Contact  
+- ✅ Built with React and Tailwind CSS  
+
+## 🛠️ Tech Stack
+
+- **React.js**  
+- **Vite**  
+- **Tailwind CSS**  
+- **Lucide Icons**  
+
+## 📁 Folder Structure
+```
+my-portfolio/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── App.jsx
+│ ├── index.css
+│ ├── main.jsx
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## 🚀 Getting Started Locally
+
+If you'd like to run this project locally:
+
+```
+git clone https://github.com/eyad6789/My-Portfolio.git
+cd My-Portfolio
+npm install
+npm run dev
+```
+Then open your browser at: http://localhost:5173
+
+💡 Future Improvements
+- Dark Mode
+- Project filtering system
+- Contact form with backend integration
+
+🤝 Contributing
+This is a personal project, but feel free to open issues or suggest improvements!
+
+📩 Contact
+If you like the project or want to connect:
+
+Email: eyadqaasim@gmail.com
+
+LinkedIn: [Your LinkedIn link if you have one]
+
+GitHub: https://github.com/eyad6789
