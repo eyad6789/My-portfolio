@@ -46,18 +46,19 @@ git clone https://github.com/eyad6789/My-Portfolio.git
 cd My-Portfolio
 npm install
 npm run dev
-```
 Then open your browser at: http://localhost:5173
+```
 
-💡 Future Improvements
+
+## 💡 Future Improvements
 - Dark Mode
 - Project filtering system
 - Contact form with backend integration
 
-🤝 Contributing
+## 🤝 Contributing
 This is a personal project, but feel free to open issues or suggest improvements!
 
-📩 Contact
+## 📩 Contact
 If you like the project or want to connect:
 
 Email: eyadqaasim@gmail.com
