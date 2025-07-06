@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, Plus } from 'lucide-react';
+import { Play, Plus, ArrowRight  } from 'lucide-react';
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -28,7 +28,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden mx-auto">
+    <div className="relative min-h-screen  overflow-hidden mx-auto">
       {/* Main Forest Background */}
       <div 
         className="absolute inset-0 bg-contain bg-no-repeat bg-center transition-transform duration-1000 ease-out "
@@ -39,7 +39,7 @@ const HeroSection = () => {
       />
       {/* Atmospheric Overlay with Mouse Parallax */}
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/10 transition-all duration-1000"
+        className="absolute inset-0 bg-gradient-to-b from-zinc-950/20 via-transparent to-zinc-950/10 transition-all duration-1000"
         style={{
           background: `
             radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%),
@@ -73,9 +73,9 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-3 mx-auto">
-        <div className="max-w-7xl w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-18 items-center">
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-3 lg:mx-auto ">
+        <div className="max-w-7xl w-full" >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mx-4 md:mx-10">
             
             {/* Left Side Content */}
             <div className="text-white">
@@ -88,7 +88,7 @@ const HeroSection = () => {
                 style={{ transitionDelay: '0.3s' }}
               >
                 <p className="text-lg md:text-xl font-light tracking-wide text-white/90 hover:text-white transition-colors duration-500">
-                  Nelover garden Classical
+                  Data-Driven Solutions  For a 
                 </p>
               </div>
 
@@ -102,10 +102,10 @@ const HeroSection = () => {
               >
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="block hover:scale-105 transition-transform duration-700 cursor-default">
-                    The definitive
+                   Smarter Future
                   </span>
-                  <span className="block mt-2 bg-gradient-to-r from-purple-600 via-purple-300 to-purple-100 bg-clip-text text-transparent hover:from-purple-300 hover:via-pink-200 hover:to-pink-200 transition-all duration-700 cursor-default">
-                    classic garden.
+                  <span className="block mt-2 bg-gradient-to-r from-purple-600 via-purple-300 to-purple-100 bg-clip-text text-transparent hover:from-purple-400 hover:via-pink-300 hover:to-pink-200 transition-all duration-700 cursor-default">
+                    Eyad Qasim
                   </span>
                 </h1>
               </div>
@@ -121,8 +121,9 @@ const HeroSection = () => {
                 `}
                 style={{ transitionDelay: '0.4s' }}
               >
-                <p className="text-lg md:text-xl font-light leading-relaxed text-white/80 hover:text-white transition-colors duration-500 max-w-md lg:ml-auto">
-                  Discover the timeless beauty of our classical garden, where nature's artistry meets human creativity in perfect harmony.
+                <p className="text-lg lg:mt-100 md:text-xl font-light leading-relaxed text-white/80 hover:text-white transition-colors duration-500 max-w-md lg:ml-auto">
+                  Unlock the power of Data, AI, and Innovation to solve real-world challenges.
+                  With a passion for analytics, problem-solving, and smart technologies, I help individuals and organizations turn data into meaningful insights.
                 </p>
               </div>
 
@@ -134,27 +135,24 @@ const HeroSection = () => {
                 `}
                 style={{ transitionDelay: '0.9s' }}
               >
-                {/* Explore Button */}
-                {/* <button className="group relative px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white font-semibold hover:bg-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-emerald-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
-                  <span className="relative z-10 flex items-center gap-3">
-                    <Play size={20} className="group-hover:scale-110 transition-transform duration-300" />
-                    Explore Garden
-                  </span>
-                </button> */}
-
                 {/* Learn More Button */}
-                <button className="group relative px-8 py-4 bg-transparent border-2 border-purple-400/30 rounded-full text-white font-semibold hover:bg-purple-600 hover:text-white-600 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                <button className="group relative px-10 py-4 bg-transparent border-2 border-purple-400/30 rounded-full text-white font-semibold hover:bg-purple-600 hover:text-white-600 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
                   <div className="absolute inset-0 bg-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"></div>
                   <span className="relative z-10 flex items-center gap-3">
                     Contact Me
-                    <Plus size={20} className="group-hover:rotate-180 transition-transform duration-500" />
+                    <ArrowRight size={20} className="group-hover:rotate-360 transition-transform duration-500" />
                   </span>
                 </button>
+
               </div>
             </div>
           </div>
+                <div className=" hidden md:block absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-zinc-950 to-transparent pointer-events-none z-20 "></div>
+      <div className=" hidden md:block absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-zinc-950 to-transparent pointer-events-none z-20 "></div>
+      <div className=" hidden md:block absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-zinc-950 to-transparent pointer-events-none z-20 "></div>
+      <div className=" hidden md:block absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-zinc-950 to-transparent pointer-events-none z-20 "></div>
         </div>
+
       </div>
       {/* Custom Styles */}
       <style jsx>{`

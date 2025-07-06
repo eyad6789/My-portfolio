@@ -9,14 +9,12 @@ const StatisticsSection = () => {
     return (
         
     <div className="bg-zinc-950 text-white py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Design That<br />
-              Delivers Real<br />
-              Results
+              What Defines <br /> My Work
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed">
               Every project I work on is aimed at delivering tangible results. From increased brand recognition to improved user engagement, here's a look at the numbers that define success.
@@ -27,18 +25,18 @@ const StatisticsSection = () => {
           <div className="space-y-8">
             {[
               {
-                number: '20+',
-                label: 'Years experience',
+                number: '3+',
+                label: 'Years experience in Data & AI Projects',
                 color: 'text-purple-500'
               },
               {
-                number: '200+',
-                label: 'Happy clients',
+                number: '10+',
+                label: 'Technical Projects Completed',
                 color: 'text-purple-500'
               },
               {
-                number: '500+',
-                label: 'Projects done',
+                number: '100+',
+                label: 'Hours of AI & Data Training',
                 color: 'text-purple-500'
               }
             ].map((stat, index) => (

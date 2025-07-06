@@ -24,7 +24,7 @@ const AnimatedNavHeader = () => {
       {/* Animated background elements */}
       
       {/* Navigation Header */}
-      <header className={`fixed top-0 w-4xl m-auto z-50 transition-all duration-700 ease-out ${
+      <header className={`fixed top-0 w-l lg:min-w-4xl mx-auto z-50 transition-all duration-700 ease-out ${
         isScrolled ? 'py-2 md:py-4' : 'py-4 md:py-6'
       }`}>
         <nav className={`mx-3 sm:mx-4 md:mx-6 lg:mx-12 transition-all duration-700 ease-out ${
@@ -36,13 +36,21 @@ const AnimatedNavHeader = () => {
             
             {/* Logo */}
             <div className="flex items-center group cursor-pointer">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-br from-pink-500 to-orange-400 rounded-xl md:rounded-2xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-lg">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-br rounded-xl md:rounded-2xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-lg">
+                <svg width="498" height="497" viewBox="0 0 498 497" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_176_11)">
+                  <path d="M289.82 18.67L293.98 23.83C315.91 51.01 312.53 90.64 286.31 113.71L127.93 253.06C126.43 254.38 124.15 254.23 122.84 252.73L119.22 248.59C95.48 221.46 98.27 180.22 125.44 156.53L284.1 18.16C285.8 16.67 288.4 16.9 289.82 18.66V18.67Z" fill="#AD46FF"/>
+                  <path d="M0.0200058 266.51C-0.339994 263.05 4.47001 261.81 5.82001 265.02C34.14 332.3 122.87 459.15 246.72 424.04C396.86 381.48 438.8 173.62 442.88 151.36C443.1 150.17 442.47 148.99 441.36 148.52C439.09 147.55 435.3 146.42 433.23 148.43L240.99 318.18C225.83 331.43 202.7 329.43 190.03 313.79L170.4 289.56C168.82 287.61 169.06 284.77 170.94 283.11L490.58 0.650012C492.14 -0.729988 494.62 0.210012 494.87 2.28001C498.06 28.6 509.35 158.87 444.22 311.44C417.79 373.36 339.22 481.44 246.72 494.51C109.62 513.89 30.75 411.49 15.11 388.81C13.23 386.08 12.06 382.93 11.72 379.63L0.0200058 266.51Z" fill="#AD46FF"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_176_11">
+                  <rect width="497.66" height="496.94" fill="white"/>
+                  </clipPath>
+                  </defs>
                 </svg>
               </div>
               <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl font-bold text-white hidden sm:block lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
-                Brand
+                Eyad
               </span>
             </div>
 
@@ -57,7 +65,7 @@ const AnimatedNavHeader = () => {
                     onMouseLeave={() => setHoveredItem(null)}
                   >
                     {item}
-                    <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-pink-400 to-orange-400 transform origin-left transition-all duration-300 ${
+                    <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-pink-500 to-purple-600 transform origin-left transition-all duration-300 ${
                       hoveredItem === index ? 'scale-x-100' : 'scale-x-0'
                     }`}></span>
                   </a>
@@ -67,10 +75,10 @@ const AnimatedNavHeader = () => {
 
             {/* Desktop Contact Button */}
             <button className="hidden md:block relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white font-medium uppercase text-xs md:text-sm px-4 md:px-6 lg:px-8 py-2 md:py-3 rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-indigo-900">
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
                 Contact
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-pink-500 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </button>
 

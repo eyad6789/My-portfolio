@@ -12,11 +12,11 @@ const AchievementSection = () => {
         {/* Services Header */}
         <div className="mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Design Solutions That<br />
-            Elevate Your Brand
+           Practical Tech Solutions <br />
+            To Drive Innovation
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
-            From strategy to execution, I provide tailored design services that help brands stand out and create meaningful connections. Whether you need a strong identity, a seamless digital experience, or creative direction, I've got you covered.
+            Whether you're looking to harness AI, leverage data, or build smart systems, I provide hands-on technical solutions that create real value.
           </p>
         </div>
 
@@ -25,18 +25,18 @@ const AchievementSection = () => {
           {[
             {
               number: '01',
-              title: 'Brand Identity & Strategy',
-              description: 'From logo design to full brand systems, I create cohesive identities that reflect your values and resonate with your audience.'
+              title: 'Data Analysis & Dashboards',
+              description: 'Turn raw data into clear, interactive reports and dashboards using Python, Power BI, SQL, and Excel.'
             },
             {
               number: '02',
-              title: 'UI/UX Design & Digital Experiences',
-              description: 'I design intuitive, user-centered digital experiences that are both beautiful and functional, ensuring they to achieve your goals.'
+              title: 'AI Development',
+              description: 'Build machine learning and deep learning models for healthcare, smart cities, and other real-world applications.'
             },
             {
               number: '03',
-              title: 'Full Integration',
-              description: 'With a strong design system, I help brands maintain consistency across all touchpoints, ensuring a seamless brand experience.'
+              title: 'Smart Systems & IoT',
+              description: 'Design and develop intelligent systems like Smart Mirrors, QR platforms, and IoT solutions.'
             }
           ].map((service, index) => (
             <div

@@ -23,28 +23,28 @@ const FeaturedProjectsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
-              title: 'Car Wash Branding & Website',
+              title: 'AI - Brain Tumor Detection',
               category: 'Branding',
               image: 'linear-gradient(135deg, #ff6b35 0%, #f7931e 100%)',
-              description: 'Complete brand identity and digital presence for premium car wash service'
+              description: 'Deep learning model for X-ray analysis with 99.93% accuracy.'
             },
             {
-              title: 'Audio Speaker Branding and Design',
+              title: 'Smart Mirror (IoT)',
               category: 'Product Design',
               image: 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)',
-              description: 'Modern audio brand with sleek product design and packaging'
+              description: 'Award-winning smart mirror project with AI integration.'
             },
             {
-              title: 'Interior Branding for Luxe Spezails',
+              title: 'Data Dashboards & Analysis',
               category: 'Interior Design',
               image: 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)',
-              description: 'Luxury interior branding with sophisticated design elements'
+              description: 'SQL, Excel, Power BI dashboards for sales, e-commerce, and more.'
             },
             {
-              title: 'Streetwear Brand Identity & Web Design',
+              title: 'QR Code System',
               category: 'Fashion',
               image: 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)',
-              description: 'Bold streetwear brand with urban aesthetic and e-commerce platform'
+              description: 'Custom QR code web app for conference verification.'
             }
           ].map((project, index) => (
             <div

@@ -9,8 +9,8 @@ import CallToActionSection from './components/callToAction';
 import FeaturedProjectsSection from './components/featureProject';
 import StatisticsSection from './components/statistics'
 import CircularGallery from './components/CircularGallery'
-
-
+import TestimonialsSection from './components/testimonials';
+import Footer from './components/footer';
 
 const App = () => {
 
@@ -23,10 +23,12 @@ const App = () => {
     <CetifiactionSection/> 
     <CallToActionSection/>
     <FeaturedProjectsSection/>
-    <div style={{ height: '600px', position: 'relative' }}>
+    <div style={{ position: 'relative' }}>
       <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
     </div>
     <StatisticsSection/>
+    {/* <TestimonialsSection/> */}
+    <Footer/>
     </main>
   );
 };

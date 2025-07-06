@@ -14,13 +14,12 @@ const CetifiactionSection = () => {
                     {/* Left Content */}
                     <div>
                         <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                            Award-Winning<br />
-                            Design That<br />
-                            Makes an<br />
-                            Impact
+                            Certified. Recognized. <br />
+                            Committed to <br /> 
+                            Excellence.
                         </h2>
                         <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                            I'm passionate about creating designs that make a difference. My work has been recognized for innovation in branding, UI/UX, and digital experiences. Each recognition reflects my commitment to crafting impactful and visually stunning designs.
+                            My work and skills have been recognized through awards, certifications, and real-world projects in AI, data analysis, and tech innovation.
                         </p>
                         <button className="group flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600 px-6 py-3 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                             <span>See my works</span>
@@ -32,32 +31,32 @@ const CetifiactionSection = () => {
                     <div className="space-y-8">
                         {[
                             {
-                            year: '2024',
-                            title: 'Awwwards - Site of the Day',
-                            description: 'Recognized for outstanding UI/UX design and innovation, setting new standards in digital experience.',
+                            year: '2025',
+                            title: 'Data Analysis - Cisco Academy',
+                            description: 'Foundational Python programming for data tasks and automation.',
                             category: 'Web Design'
                             },
                             {
                             year: '2024',
-                            title: 'D&AD Awards - Branding Excellence',
-                            description: 'Awarded for creating a compelling and cohesive brand identity that resonates with audiences.',
+                            title: 'AI & IoT Training - Offenburg University, Germany',
+                            description: 'Hands-on experience building secure, sustainable IoT systems.',
                             category: 'Branding'
                             },
                             {
-                            year: '2023',
-                            title: 'Red Dot Design Award - Best Visual Identity',
-                            description: 'Honored for a bold and distinctive visual identity that captures the essence of the brand.',
+                            year: '2024',
+                            title: 'Riyada Entrepreneurship Program - Al Naharun University',
+                            description: 'Certified for project development and feasibility studies.',
                             category: 'Identity'
                             },
                             {
                             year: '2023',
-                            title: 'CSS Design Awards - Best UI Innovation',
-                            description: 'Celebrated for creating a seamless, engaging and visually stunning digital experience.',
+                            title: 'AI Hackathon - Computiq, Iraq',
+                            description: 'Developed AI model for Brain Tumor Detection (99.93% accuracy).',
                             category: 'UI/UX'
                             },
                             {
-                            year: '2022',
-                            title: 'Design Week Awards - Emerging Designer',
+                            year: '2023',
+                            title: 'Machine Learning - AI Dojo - Makers',
                             description: 'Recognized as a rising talent in brand and identity design, pushing creative boundaries.',
                             category: 'Recognition'
                             }

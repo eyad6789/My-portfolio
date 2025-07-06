@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { User,  ArrowRight } from 'lucide-react';
+import { User, ArrowRight } from 'lucide-react';
+import aboutAI from '../assets/about/about-AI.jpeg';
+import DataAnalysis from '../assets/about/about-dataAnalysis.jpeg';
+import IoT from '../assets/about/about-IoT.jpeg';
+
 
 const DominicPortfolio = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-
 
   useEffect(() => {
     setIsLoaded(true);
@@ -12,53 +15,53 @@ const DominicPortfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'Brand Identity',
-      category: 'Design',
-      image: 'url(../assets/my-img.png)',
-      description: 'Modern brand identity design'
+      title: 'AI Solutions',
+      category: 'AI & Innovation',
+      image: aboutAI,
+      type: 'image',
+      description: 'Brain Tumor Detection, Face Recognition Systems, Smart Agriculture'
     },
     {
       id: 2,
-      title: 'Interior Design',
-      category: 'UI/UX',
-      image: 'linear-gradient(135deg, #ff9ff3 0%, #feca57 100%)',
-      description: 'Contemporary interior concept'
+      title: 'Data Analytics',
+      category: 'Data & Insights',
+      image: DataAnalysis,
+      type: 'image',
+      description: 'SQL, Excel, Power BI, Python – turning raw data into powerful dashboards'
     },
     {
       id: 3,
-      title: 'Product Design',
-      category: 'Product',
-      image: 'linear-gradient(135deg, #54a0ff 0%, #2f3542 100%)',
-      description: 'Minimal product photography'
+      title: 'Tech Projects',
+      category: 'IoT & Development',
+      image: IoT,
+      type: 'image',
+      description: 'IoT with STM32, Web Development, QR Systems, and more'
     }
   ];
 
   const PortfolioSection = () => (
     <div className="min-h-screen bg-black text-white">
-      {/* Top Navigation Tabs */}
-
-
       {/* Main Content */}
       <div className="px-6 py-12">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="flex justify-left flex-col text-left mb-16 ml-120">
+          <div className="flex justify-left flex-col text-left mb-16 m-auto lg:ml-120">
             <h2 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
-              <span className="block">Crafting Meaningful</span>
-              <span className="block">Brands & Intuitive</span>
-              <span className="block">Digital Experiences That</span>
-              <span className="block">Stand Out</span>
+              <span className="block">Turning Data</span>
+              <span className="block">Into</span>
+              <span className="block">Actionable Insights</span>
             </h2>
             
-            <div className="max-w-7xl mx-auto mb-8 ">
+            <div className="max-w-7xl mx-auto mb-8">
               <p className="text-gray-400 text-lg leading-relaxed">
-                I'm Dominic, a London-based Brand and UI/UX Designer passionate about crafting visually compelling identities and seamless digital experiences. With a strategic approach and a keen eye for detail, I help businesses stand out and connect with their audience. Let's create something memorable together.
+                I'm Eyad Qasim Rahim, a Data Analyst, AI Developer, and Information Engineer based in Baghdad. With a strong foundation in problem-solving, project development, and AI solutions, I specialize in building real-world applications that make a measurable impact.
+                From AI-driven medical tools to data dashboards and smart IoT projects, my work combines technical expertise with strategic thinking to help organizations and startups achieve their goals.
               </p>
             </div>
 
-            <button className="group flex items-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 px-6 py-3 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl mr-auto">
+            <button className="group flex items-center bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600 px-6 py-3 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl mr-auto">
               <span>See my works</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
 
@@ -73,56 +76,31 @@ const DominicPortfolio = () => {
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="relative overflow-hidden rounded-3xl aspect-[4/5] mb-4 transform group-hover:scale-105 transition-transform duration-500">
-                  <div 
-                    className="w-full h-full flex items-center justify-center relative"
-                    style={{ background: project.image }}
-                  >
-                    {/* Project-specific content */}
-                    {project.id === 1 && (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-32 h-32 bg-black bg-opacity-20 rounded-full flex items-center justify-center">
-                          <div className="w-16 h-16 bg-white rounded-lg transform rotate-45"></div>
-                        </div>
-                      </div>
-                    )}
-                    
-                    {project.id === 2 && (
-                      <div className="absolute inset-0 p-8">
-                        <div className="w-full h-full bg-white bg-opacity-10 rounded-2xl backdrop-blur-sm flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="w-12 h-12 bg-white rounded-lg mx-auto mb-4 opacity-80"></div>
-                            <div className="w-16 h-2 bg-white rounded-full mx-auto opacity-60"></div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    
-                    {project.id === 3 && (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-24 h-16 bg-black bg-opacity-40 rounded-lg flex items-center justify-center">
-                          <div className="grid grid-cols-2 gap-1">
-                            <div className="w-3 h-3 bg-white rounded-full"></div>
-                            <div className="w-3 h-3 bg-white rounded-full"></div>
-                            <div className="w-3 h-3 bg-white rounded-full"></div>
-                            <div className="w-3 h-3 bg-white rounded-full"></div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform scale-0 group-hover:scale-100 transition-transform duration-300">
-                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                          <ArrowRight className="w-5 h-5 text-black" />
-                        </div>
+                  {/* Background - Handle both images and gradients */}
+                  {project.type === 'image' ? (
+                    <div 
+                      className="w-full h-full bg-cover bg-center"
+                      style={{ backgroundImage: `url(${project.image})` }}
+                    />
+                  ) : (
+                    <div 
+                      className="w-full h-full"
+                      style={{ background: project.image }}
+                    />
+                  )}
+                  
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/0 bg-opacity-0 hover:bg-black/30  group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                    <div className="transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        <ArrowRight className="w-5 h-5 text-purple-400" />
                       </div>
                     </div>
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-white group-hover:text-orange-400 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
                     {project.title}
                   </h3>
                   <p className="text-gray-400 text-sm">{project.category}</p>
@@ -137,6 +115,7 @@ const DominicPortfolio = () => {
       <div className="pb-12"></div>
     </div>
   );
+
   return (
     <div>
       <PortfolioSection />
