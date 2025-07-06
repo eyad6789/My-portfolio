@@ -3,9 +3,7 @@
 Welcome to the source code of my **Personal Portfolio Website**, built to showcase my work, projects, and skills as a developer.
 
 ## 🔥 Live Demo
-
-Check out the live website here:  
-[https://progressinpeace.org/home.html](https://progressinpeace.org/home.html)
+[// Check out the live website here:  [https://progressinpeace.org/home.html](https://progressinpeace.org/home.html)]
 
 ## ✨ Features
 
