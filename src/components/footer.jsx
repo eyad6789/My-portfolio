@@ -53,10 +53,10 @@ import Logo from '../assets/Layer_1.png';
           <div>
             <h3 className="text-white font-semibold mb-4">Social</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">LinkedIn</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Instagram</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">GitHub</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Facebook</a></li>
+              <li><a href="https://www.linkedin.com/in/eyad-qasim-2a96b624b/" className="text-gray-400 hover:text-white transition-colors duration-300">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/eyad.qaasim/" className="text-gray-400 hover:text-white transition-colors duration-300">Instagram</a></li>
+              <li><a href="https://github.com/eyad6789" className="text-gray-400 hover:text-white transition-colors duration-300">GitHub</a></li>
+              <li><a href="https://t.me/MyOpinionsLifeExperience" className="text-gray-400 hover:text-white transition-colors duration-300">Telegram</a></li>
             </ul>
           </div>
         </div>

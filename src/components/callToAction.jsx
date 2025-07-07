@@ -1,6 +1,6 @@
 import React from 'react';
 import { User, ArrowRight } from 'lucide-react';
-import myImage from '../assets/my-img.png';
+import myImage from '../assets/sticker.webp';
 
 
 const CallToActionSection = () => {
@@ -11,7 +11,7 @@ const CallToActionSection = () => {
             
             {/* Background Image */}
             <div 
-                className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+                className="absolute inset-0 bg-contain bg-bottom bg-no-repeat"
                 style={{
                     backgroundImage: `url(${myImage})`,
                 }}
@@ -25,7 +25,7 @@ const CallToActionSection = () => {
 
             {/* Content */}
             <div className="relative z-20 max-w-4xl mx-auto text-center">
-                <h2 className="text-4xl lg:text-6xl font-bold mb-6 mt-60 leading-tight drop-shadow-lg">
+                <h2 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
                     Let's Bring Your Tech <br />
                     Vision to Life
                 </h2>

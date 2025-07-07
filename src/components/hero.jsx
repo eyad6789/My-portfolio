@@ -31,7 +31,7 @@ const HeroSection = () => {
     <div className="relative min-h-screen  overflow-hidden mx-auto">
       {/* Main Forest Background */}
       <div 
-        className="absolute inset-0 bg-contain bg-no-repeat bg-center transition-transform duration-1000 ease-out "
+        className="absolute inset-0 bg-contain bg-no-repeat transition-transform duration-1000 ease-out  bg-bottom"
         style={{
           backgroundImage: `url("./src/assets/my-img.png")`,
           transform: `scale(${1 + scrollY * 0.0002})`,
@@ -136,7 +136,7 @@ const HeroSection = () => {
                 style={{ transitionDelay: '0.9s' }}
               >
                 {/* Learn More Button */}
-                <button className="group relative px-10 py-4 bg-transparent border-2 border-purple-400/30 rounded-full text-white font-semibold hover:bg-purple-600 hover:text-white-600 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                <button className="group relative px-10 py-4 bg-transparent border-2 border-purple-400/30 rounded-full text-white font-semibold hover:bg-purple-600 hover:text-white-600 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden z-25">
                   <div className="absolute inset-0 bg-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"></div>
                   <span className="relative z-10 flex items-center gap-3">
                     Contact Me
@@ -147,10 +147,9 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-                <div className=" hidden md:block absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-zinc-950 to-transparent pointer-events-none z-20 "></div>
-      <div className=" hidden md:block absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-zinc-950 to-transparent pointer-events-none z-20 "></div>
-      <div className=" hidden md:block absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-zinc-950 to-transparent pointer-events-none z-20 "></div>
-      <div className=" hidden md:block absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-zinc-950 to-transparent pointer-events-none z-20 "></div>
+                
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none z-20 "></div>
+     
         </div>
 
       </div>

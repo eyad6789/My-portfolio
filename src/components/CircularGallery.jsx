@@ -1,8 +1,32 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+
+// You'll need to import your images here
+import robot from '../assets/circularGallery/robot-circular.jpeg';
+import data from '../assets/circularGallery/data-circular.jpeg';
+import brain from '../assets/circularGallery/brain-circular.jpeg';
+import AITools from '../assets/circularGallery/AI-tools.jpeg';
+import allFuture from '../assets/circularGallery/all-future-tools.jpeg';
+import coding from '../assets/circularGallery/coding-circular.jpeg';
+import smartCity from '../assets/circularGallery/smart-city-circular.jpeg';
+import visulazing from '../assets/circularGallery/visulazing-circular.jpeg';
+import webFrame from '../assets/circularGallery/webFrame-circular.jpeg';
+
+// For demo purposes, using placeholder images
+const sampleImages = [
+  robot,
+  data,
+  brain,
+  allFuture,
+  coding,
+  AITools,
+  smartCity,
+  visulazing,
+  webFrame,
+];
 
 // Simplified OGL-like classes for the gallery
 class SimpleRenderer {
-  constructor(options = {}) {
+  constructor() {
     this.canvas = document.createElement('canvas');
     this.gl = this.canvas.getContext('webgl') || this.canvas.getContext('experimental-webgl');
     this.width = 0;
@@ -24,7 +48,6 @@ class SimpleRenderer {
     this.canvas.width = width;
     this.canvas.height = height;
     this.canvas.style.width = width + 'px';
-    // this.canvas.style.height = height + 'px';
     this.gl.viewport(0, 0, width, height);
   }
   
@@ -46,7 +69,6 @@ class CircularGalleryItem {
       box-shadow: 0 8px 25px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
       cursor: pointer;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -55,6 +77,7 @@ class CircularGalleryItem {
       font-size: 14px;
       text-align: center;
       transform-style: preserve-3d;
+      border: 2px solid rgba(255,255,255,0.1);
     `;
     
     this.index = options.index;
@@ -65,13 +88,28 @@ class CircularGalleryItem {
     this.rotationSpeed = 0.02;
     this.data = options.data;
     
-    // Set content
+    // Set content - prioritize image over text
     if (this.data.image) {
       const img = document.createElement('img');
       img.src = this.data.image;
-      img.style.cssText = 'width: 100%; height: 100%; object-fit: cover;';
+      img.style.cssText = `
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      `;
+      img.alt = this.data.alt || `Gallery item ${this.index + 1}`;
+      
+      // Add image loading error handling
+      img.onerror = () => {
+        console.warn(`Failed to load image: ${this.data.image}`);
+        this.element.style.background = this.data.gradient || `linear-gradient(135deg, hsl(${this.index * 360 / this.totalItems}, 70%, 60%) 0%, hsl(${(this.index * 360 / this.totalItems) + 30}, 70%, 40%) 100%)`;
+        this.element.innerHTML = this.data.text || `Item ${this.index + 1}`;
+      };
+      
       this.element.appendChild(img);
     } else {
+      // Fallback to text/gradient
       this.element.innerHTML = this.data.text || `Item ${this.index + 1}`;
       this.element.style.background = this.data.gradient || `linear-gradient(135deg, hsl(${this.index * 360 / this.totalItems}, 70%, 60%) 0%, hsl(${(this.index * 360 / this.totalItems) + 30}, 70%, 40%) 100%)`;
     }
@@ -80,11 +118,23 @@ class CircularGalleryItem {
     this.element.addEventListener('mouseenter', () => {
       this.element.style.transform = this.element.style.transform.replace(/scale\([^)]*\)/, '') + ' scale(1.1)';
       this.element.style.boxShadow = '0 12px 35px rgba(0,0,0,0.4)';
+      
+      // Scale image on hover if it exists
+      const img = this.element.querySelector('img');
+      if (img) {
+        img.style.transform = 'scale(1.05)';
+      }
     });
     
     this.element.addEventListener('mouseleave', () => {
       this.element.style.transform = this.element.style.transform.replace(/scale\([^)]*\)/, '') + ' scale(1)';
       this.element.style.boxShadow = '0 8px 25px rgba(0,0,0,0.3)';
+      
+      // Reset image scale
+      const img = this.element.querySelector('img');
+      if (img) {
+        img.style.transform = 'scale(1)';
+      }
     });
   }
   
@@ -101,7 +151,6 @@ class CircularGalleryItem {
     const floatY = Math.sin(time * 0.003 + this.index * 0.5) * 8;
     
     // Calculate opacity based on vertical position - fade out as items go down
-    const normalizedY = (y + this.radius) / (this.radius * 2); // 0 to 1
     let opacity = 1;
     
     // Fade out when going down (bottom half of circle)
@@ -291,16 +340,53 @@ export default function CircularGallery({
   const containerRef = useRef(null);
   const appRef = useRef(null);
   
-  // Default items if none provided
+  // Items with images - replace with your actual image imports
   const defaultItems = [
-    { text: "Design", gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
-    { text: "Development", gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)" },
-    { text: "Strategy", gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
-    { text: "Innovation", gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)" },
-    { text: "Brand", gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)" },
-    { text: "Digital", gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)" },
-    { text: "Creative", gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)" },
-    { text: "Experience", gradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)" },
+    { 
+      image: sampleImages[0], 
+      alt: "Portrait 1",
+      text: "Development" // fallback text if image fails
+    },
+    { 
+      image: sampleImages[1], 
+      alt: "Portrait 2",
+      text: "Strategy" 
+    },
+    { 
+      image: sampleImages[2], 
+      alt: "Portrait 3",
+      text: "Innovation" 
+    },
+    { 
+      image: sampleImages[3], 
+      alt: "Portrait 4",
+      text: "Brand" 
+    },
+    { 
+      image: sampleImages[4], 
+      alt: "Portrait 5",
+      text: "Digital" 
+    },
+    { 
+      image: sampleImages[5], 
+      alt: "Portrait 6",
+      text: "Creative" 
+    },
+    { 
+      image: sampleImages[6], 
+      alt: "Portrait 7",
+      text: "Experience" 
+    },
+    { 
+      image: sampleImages[7], 
+      alt: "Portrait 8",
+      text: "Design" 
+    },
+    { 
+      image: sampleImages[8], 
+      alt: "Portrait 9",
+      text: "Marketing" 
+    },
   ];
   
   const galleryItems = items.length > 0 ? items : defaultItems;
@@ -324,16 +410,12 @@ export default function CircularGallery({
   
   return (
     <div className="w-full h-screen bg-gradient-to-br from-zinc-950 via-zinc-950 to-zinc-950 overflow-hidden relative">
-      {/* Background Elements */}
-      {/* <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-blue-900/20"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.1),transparent_50%)]"></div>
-       */}
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 rounded-full animate-pulse"
+            className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -360,7 +442,6 @@ export default function CircularGallery({
             <span className="relative z-10 flex items-center justify-center">
               Contact Me 
             </span>
-            {/* Pulsing effect to show cards emanating from button */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-fuchsia-400 opacity-50 animate-pulse"></div>
             <div className="absolute inset-0 bg-white opacity-20 animate-ping"></div>
           </button>
