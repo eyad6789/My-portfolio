@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {User, Play, Plus, ArrowRight  } from 'lucide-react';
+import myImage from '../assets/my-img.png'
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -33,7 +34,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-contain bg-no-repeat transition-transform duration-1000 ease-out  bg-bottom"
         style={{
-          backgroundImage: `url("./src/assets/my-img.png")`,
+          backgroundImage: `url("${myImage}")`,
           transform: `scale(${1 + scrollY * 0.0002})`,
         }}
       />
