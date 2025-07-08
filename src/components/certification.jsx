@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,10 +21,13 @@ const CetifiactionSection = () => {
                         <p className="text-gray-400 text-lg leading-relaxed mb-8">
                             My work and skills have been recognized through awards, certifications, and real-world projects in AI, data analysis, and tech innovation.
                         </p>
-                        <button className="group flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600 px-6 py-3 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                            <span>See my works</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                        </button>
+                        <Link to="/about">
+                            <button className="inline-flex items-center gap-3 px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
+                                <span>See More About Me</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                            </button>
+                        </Link>
+                        
                     </div>
 
                     {/* Right Content - Awards List */}

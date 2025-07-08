@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 // You'll need to import your images here
 import robot from '../assets/circularGallery/robot-circular.jpeg';
@@ -430,21 +431,24 @@ export default function CircularGallery({
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
         <div className="text-center max-w-2xl px-6">
           <h1 className="text-4xl md:text-4xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-            Let's Create Something
+            Let’s Build Smarter Solutions 
             <br />
-            Exceptional
+            Together
           </h1>
           <p className="text-lg md:text-l text-gray-300 mb-8 leading-relaxed">
-            Let's collaborate to create a bold brand or seamless digital experience. 
-            Get in touch!
+            Whether you're looking to transform data into insights or craft intelligent digital experiences with AI, I’m here to help.
+            Ready to innovate?
+            Let’s connect.
           </p>
-          <button className="pointer-events-auto bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden">
-            <span className="relative z-10 flex items-center justify-center">
-              Contact Me 
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-fuchsia-400 opacity-50 animate-pulse"></div>
-            <div className="absolute inset-0 bg-white opacity-20 animate-ping"></div>
-          </button>
+          <Link to="/contact">
+            <button className="pointer-events-auto bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden">
+              <span className="relative z-10 flex items-center justify-center">
+                Contact Me 
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-fuchsia-400 opacity-50 animate-pulse"></div>
+              <div className="absolute inset-0 bg-white opacity-20 animate-ping"></div>
+            </button>
+          </Link>
         </div>
       </div>
       

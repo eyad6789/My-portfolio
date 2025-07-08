@@ -23,10 +23,10 @@ const App = () => {
     <CetifiactionSection/> 
     <CallToActionSection/>
     <FeaturedProjectsSection/>
+    <StatisticsSection/>
     <div style={{ position: 'relative' }}>
       <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
     </div>
-    <StatisticsSection/>
     {/* <TestimonialsSection/> */}
     <Footer/>
     </main>

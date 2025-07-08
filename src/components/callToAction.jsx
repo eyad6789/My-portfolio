@@ -1,11 +1,12 @@
 import React from 'react';
 import { User, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import myImage from '../assets/sticker.webp';
 
 
 const CallToActionSection = () => {
     return (
-        <div className="relative bg-zinc-950 text-white py-20 px-6 overflow-hidden min-h-screen flex items-center">
+        <div className="relative bg-zinc-950 text-white py-20 px-6 overflow-hidden min-h-60 flex items-center">
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/90 via-purple-600/85 to-pink-600/80 opacity-50"></div>
             
@@ -33,11 +34,12 @@ const CallToActionSection = () => {
                 <p className="text-red-100 text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed drop-shadow-md">
                     Ready to transform your idea into a data-powered solution? I specialize in building AI tools, smart systems, and data dashboards that deliver results.
                 </p>
-                
-                <button className="group flex items-center space-x-2 bg-white text-red-600 hover:bg-red-50 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl mx-auto">
+                <Link to="/contact">
+                <button className="inline-flex items-center gap-3 px-8 py-4 text-purple-600 hover:text-purple-700 bg-white rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
                     <span>Let's Work Together</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
+                </Link>
             </div>
         </div>
     )

@@ -41,7 +41,7 @@ const AchievementSection = () => {
           ].map((service, index) => (
             <div
               key={service.number}
-              className={`bg-zinc-900 rounded-2xl p-8 hover:bg-zinc-800 transition-all duration-500 transform hover:scale-105 ${
+              className={`bg-gradient-to-br from-purple-900/10 to-transparent backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 ${
                 isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
               style={{ animationDelay: `${index * 200}ms` }}
